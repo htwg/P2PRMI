@@ -1,0 +1,41 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    
+    <parent>
+        <artifactId>parent</artifactId>
+        <groupId>de.htwg_konstanz.in.uce</groupId>
+        <version>1.0</version>
+        <relativePath>../de.htwg_konstanz.in.uce.parent/pom.xml</relativePath>
+    </parent>
+    
+    <groupId>de.htwg_konstanz.in.uce.dht</groupId>
+    <artifactId>dht_access</artifactId>
+    <version>0.1-SNAPSHOT</version>
+    <name>DHT Access</name>
+    
+    <dependencies>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>r09</version>
+        </dependency>
+    
+        <dependency>
+            <groupId>org.jmule</groupId>
+            <artifactId>jmule2</artifactId>
+            <version>cvs</version>
+        </dependency>
+    
+        <dependency>
+            <groupId>com.aelitis.azureus</groupId>
+            <artifactId>azureus2</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>de.uka.tm</groupId>
+            <artifactId>jkad</artifactId>
+            <version>0.1</version>
+        </dependency>
+    </dependencies>
+</project>

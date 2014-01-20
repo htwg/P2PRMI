@@ -1,0 +1,71 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>de.htwg_konstanz.in.uce.rmi.registry.p2p</groupId>
+        <artifactId>parent</artifactId>
+        <version>0.1-SNAPSHOT</version>
+        <relativePath>../de.htwg_konstanz.in.uce.rmi.registry.p2p.parent/pom.xml</relativePath>
+    </parent>
+    
+    <artifactId>demo</artifactId>
+    
+    <dependencies>
+    
+        <dependency>
+            <groupId>de.htwg_konstanz.in.uce.rmi.hp</groupId>
+            <artifactId>socket_factories</artifactId>
+            <version>0.1</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>de.htwg_konstanz.in.uce.HelloRemote</groupId>
+            <artifactId>HelloRemote</artifactId>
+            <version>0.1-SNAPSHOT</version>
+        </dependency>
+        
+        <!-- 
+        <dependency>
+            <groupId>de.htwg_konstanz.in.uce.rmi.hp</groupId>
+            <artifactId>demo</artifactId>
+            <version>0.2-SNAPSHOT</version>
+        </dependency>
+         -->
+        
+        <dependency>
+            <groupId>de.htwg_konstanz.in.uce.rmi.registry.p2p</groupId>
+            <artifactId>peer</artifactId>
+            <version>0.1-SNAPSHOT</version>
+        </dependency>
+        
+    </dependencies>
+    
+    <build>
+       <plugins>
+           <plugin>
+               <groupId>org.apache.maven.plugins</groupId>
+               <artifactId>maven-assembly-plugin</artifactId>
+               <configuration>
+                   <descriptors>
+                       <descriptor>Assembly.xml</descriptor>
+                   </descriptors>
+                   <archive>
+                       <manifest>
+                           <mainClass>de.htwg_konstanz.in.uce.rmi.registry.p2p.demo.PeerServer</mainClass>
+                           <!-- <mainClass>de.htwg_konstanz.in.uce.rmi.registry.p2p.demo.PeerClient</mainClass> --> 
+                       </manifest>
+                   </archive>
+               </configuration>
+               <executions>
+          <execution>
+            <id>make-assembly</id> <!-- this is used for inheritance merges -->
+            <phase>package</phase> <!-- bind to the packaging phase -->
+            <goals>
+              <goal>single</goal>
+            </goals>
+          </execution>
+        </executions>
+           </plugin>
+		</plugins>
+	</build>
+</project>

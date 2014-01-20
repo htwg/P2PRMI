@@ -1,0 +1,41 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+	<parent>
+        <groupId>de.htwg_konstanz.in.uce.rmi.registry.p2p</groupId>
+        <artifactId>parent</artifactId>
+        <version>0.1-SNAPSHOT</version>
+        <relativePath>../de.htwg_konstanz.in.uce.rmi.registry.p2p.parent/pom.xml</relativePath>
+    </parent>
+    
+  <artifactId>peer</artifactId>
+  <packaging>jar</packaging>
+
+  <name>peer</name>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+  	<dependency>
+    	<groupId>de.htwg_konstanz.in.uce.dht</groupId>
+        <artifactId>dht_access</artifactId>
+        <version>0.1-SNAPSHOT</version>
+    </dependency>
+    
+    <dependency>
+	    <groupId>de.htwg_konstanz.in.uce.rmi.hp</groupId>
+	    <artifactId>socket_factories</artifactId>
+	    <version>0.1</version>
+   	</dependency>
+        
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+</project>
